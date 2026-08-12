@@ -1,3 +1,5 @@
-# Leetcode 
+# Leetcode Contribution
 <br>
-solved Programs are saved via a creating a folder for each question used a extension called leethub 
+Starting my journey with LeetCode, focused on strengthening problem-solving skills and DSA fundamentals.
+<br>
+Learning. Solving. Improving. 🚀
