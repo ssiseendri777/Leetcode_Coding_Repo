@@ -48,29 +48,31 @@ class Solution {
 
         return dummy.next;
     }
+
     public static void PrintList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         ListNode Node4 = new ListNode(5);
-        ListNode Node3 = new ListNode(4,Node4);
-        ListNode Node2 = new ListNode(3,Node3);
-        ListNode Node1 = new ListNode(2,Node2);
+        ListNode Node3 = new ListNode(4, Node4);
+        ListNode Node2 = new ListNode(3, Node3);
+        ListNode Node1 = new ListNode(2, Node2);
         ListNode head1 = Node1;
         ListNode Noded = new ListNode(4);
-        ListNode Nodec = new ListNode(3,Noded);
-        ListNode Nodeb = new ListNode(2,Nodec);
-        ListNode Nodea = new ListNode(1,Nodeb);
+        ListNode Nodec = new ListNode(3, Noded);
+        ListNode Nodeb = new ListNode(2, Nodec);
+        ListNode Nodea = new ListNode(1, Nodeb);
         ListNode heada = Nodea;
-        ListNode result = mergeTwoLists(head1,heada);
-        System.out.println("1st list");
+        ListNode result = mergeTwoLists(head1, heada);
+        System.out.println("\n1st list");
         PrintList(head1);
-        System.out.println("2nd list");
+        System.out.println("\n2nd list");
         PrintList(heada);
-        System.out.println("Merged list");
+        System.out.println("\nMerged list");
         PrintList(result);
     }
 }
