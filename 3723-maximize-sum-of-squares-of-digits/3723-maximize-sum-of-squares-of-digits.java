@@ -4,19 +4,12 @@ class Solution {
             return "";
         }
         StringBuilder result = new StringBuilder();
-        int remainder = sum % 9;
-        int _9s = sum / 9;
-        for (int i = 0; i < _9s; i++) {
-            result.append('9');
+        while(num-- > 0){
+            int digit = Math.min(9,sum);
+            result.append(digit);
+            sum -= digit;
         }
-        if (remainder > 0) {
-            result.append((char) ('0' + remainder));
-        }
-        int _0s = num - result.length();
-        for (int i = 0; i < _0s; i++) {
-            result.append('0');
-        }
-        return result.toString();
+        return sum == 0 ? result.toString() : "";
     }
 
     public static void main(String[] args) {
