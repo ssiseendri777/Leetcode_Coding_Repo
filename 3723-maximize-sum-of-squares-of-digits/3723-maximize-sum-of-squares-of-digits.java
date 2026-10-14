@@ -3,13 +3,14 @@ class Solution {
         if (sum > 9 * num) {
             return "";
         }
-        StringBuilder result = new StringBuilder();
-        while(num-- > 0){
-            int digit = Math.min(9,sum);
-            result.append(digit);
-            sum -= digit;
+        int _9s = sum / 9;
+        sum %= 9;
+        StringBuilder result = new StringBuilder("9".repeat(_9s));
+        if (sum > 0) {
+            result.append(sum);
         }
-        return sum == 0 ? result.toString() : "";
+        result.append("0".repeat(num - result.length()));
+        return result.toString();
     }
 
     public static void main(String[] args) {
