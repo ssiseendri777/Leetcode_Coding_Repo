@@ -1,10 +1,12 @@
 class Solution {
     public static int minMoves(int[] nums) {
-        int min = Integer.MAX_VALUE;
+        int min = nums[0];
         int moves = 0;
         // total number of moves 
         for (int num : nums) {
-            min = Math.min(num, min);
+            if (min > num) {
+                min = num;
+            }
             // finding the minimum element from the array
             moves += num;
             // array sum
