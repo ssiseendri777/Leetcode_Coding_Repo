@@ -1,14 +1,11 @@
 class Solution {
     public static int minMoves(int[] nums) {
-        int maximum = nums[0];
+        int maximum = nums[0], sum = 0;
         for (int num : nums) {
             maximum = Math.max(num, maximum);
+            sum += num;
         }
-        int moves = 0;
-        for (int num : nums) {
-            moves += maximum - num;
-        }
-        return moves;
+        return maximum * nums.length - sum;
     }
 
     public static void main(String[] args) {
